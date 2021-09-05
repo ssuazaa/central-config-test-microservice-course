@@ -1,9 +1,9 @@
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://${POSTGRES_URL:localhost}:${POSTGRES_POST:5432}/db_invoice
+    url: jdbc:postgresql://${POSTGRES_URL:localhost:5432}/db_invoice
     username: postgres
     password: 123456
+    driver-class-name: org.postgresql.Driver
   jpa:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
