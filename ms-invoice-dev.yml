@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${POSTGRES_URL:localhost}:${POSTGRES_POST:5432}/db_invoice
+    username: postgres
+    password: 123456
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate.ddl-auto: create
+    open-in-view: true
+
+logging:
+  level:
+    org.hibernate.sql: debug
