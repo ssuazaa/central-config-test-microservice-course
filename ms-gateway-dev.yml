@@ -1,0 +1,16 @@
+zuul:
+  routes:
+    security:
+      sensitive-headers: Cookie,Set-Cookie
+    invoice:
+      service-id: ms-invoice
+      path: /api/invoices/**
+      url: http://localhost:8081/
+    pay:
+      service-id: ms-pay
+      path: /api/payments
+      url: http://localhost:8082/
+    historical:
+      service-id: ms-historical
+      path: /api/historicals/**
+      url: http://localhost:8083/
