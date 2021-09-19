@@ -9,6 +9,15 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     hibernate.ddl-auto: create
     open-in-view: true
+  kafka:
+    consumer:
+      bootstrap-servers:
+        - ${KAFKA_URL:localhost:9092}
+      group-id: group_invoice
+      enable-auto-commit: 'true'
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
 logging:
   level:
