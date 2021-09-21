@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://admin:123456@${MONGO_URL:localhost:27017}/db_transaction?authSource=admin&authMechanism=SCRAM-SHA-256
+      uri: mongodb://root:123456@${MONGO_URL:localhost:27017}/db_transaction?authSource=admin&authMechanism=SCRAM-SHA-256
   kafka:
     consumer:
       bootstrap-servers:
