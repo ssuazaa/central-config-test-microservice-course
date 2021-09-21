@@ -10,7 +10,7 @@ zuul:
       service-id: ms-pay
       path: /api/payments/**
       url: http://localhost:8082/
-    historical:
-      service-id: ms-historical
-      path: /api/historicals/**
+    transaction:
+      service-id: ms-transaction
+      path: /api/transactions/**
       url: http://localhost:8083/
