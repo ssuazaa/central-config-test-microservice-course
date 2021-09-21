@@ -1,10 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://${MONGO_DB_URL:localhost:27017}
-      username: admin
-      password: 123456
-      authenticationDatabase: db_transaction
+      uri: mongodb://admin:123456@${MONGO_URL:localhost:27017}/db_transaction?authSource=admin&authMechanism=SCRAM-SHA-256
   kafka:
     consumer:
       bootstrap-servers:
