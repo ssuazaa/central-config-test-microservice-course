@@ -9,7 +9,7 @@ spring:
     consumer:
       bootstrap-servers:
         - ${KAFKA_URL:localhost:9092}
-      group-id: group_invoice
+      group-id: group_transaction
       enable-auto-commit: 'true'
       auto-commit-interval: 100
       key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
