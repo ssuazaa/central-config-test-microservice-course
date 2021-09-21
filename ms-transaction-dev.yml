@@ -1,14 +1,10 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://${POSTGRES_URL:localhost:5432}/db_invoice
-    username: postgres
-    password: 123456
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
-    hibernate.ddl-auto: create
-    open-in-view: true
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_DB_URL:localhost:27017}
+      username: admin
+      password: 123456
+      authenticationDatabase: db_transaction
   kafka:
     consumer:
       bootstrap-servers:

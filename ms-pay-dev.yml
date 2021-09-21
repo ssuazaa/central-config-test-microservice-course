@@ -20,9 +20,3 @@ spring:
       buffer-memory: 33554432
       key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
-logging:
-  level:
-    org:
-      hibernate:
-        sql: debug
