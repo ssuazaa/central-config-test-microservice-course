@@ -5,12 +5,12 @@ zuul:
     invoice:
       service-id: ms-invoice
       path: /api/invoices/**
-      url: http://localhost:8081/
+      url: ${MS_INVOICE_URL:http://localhost:8081/}
     pay:
       service-id: ms-pay
       path: /api/payments/**
-      url: http://localhost:8082/
+      url: ${MS_PAY_URL:http://localhost:8082/}
     transaction:
       service-id: ms-transaction
       path: /api/transactions/**
-      url: http://localhost:8083/
+      url: ${MS_TRANSACTION_URL:http://localhost:8083/}
